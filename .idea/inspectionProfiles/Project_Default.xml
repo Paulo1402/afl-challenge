@@ -1,0 +1,76 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="CssOverwrittenProperties" enabled="true" level="INFORMATION" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="14">
+            <item index="0" class="java.lang.String" itemvalue="altgraph" />
+            <item index="1" class="java.lang.String" itemvalue="pyinstaller" />
+            <item index="2" class="java.lang.String" itemvalue="pefile" />
+            <item index="3" class="java.lang.String" itemvalue="pyinstaller-hooks-contrib" />
+            <item index="4" class="java.lang.String" itemvalue="chardet" />
+            <item index="5" class="java.lang.String" itemvalue="pytube" />
+            <item index="6" class="java.lang.String" itemvalue="PyQt6" />
+            <item index="7" class="java.lang.String" itemvalue="future" />
+            <item index="8" class="java.lang.String" itemvalue="pywin32-ctypes" />
+            <item index="9" class="java.lang.String" itemvalue="PyQt6-Qt6" />
+            <item index="10" class="java.lang.String" itemvalue="PyQt6-sip" />
+            <item index="11" class="java.lang.String" itemvalue="Pillow" />
+            <item index="12" class="java.lang.String" itemvalue="discord" />
+            <item index="13" class="java.lang.String" itemvalue="wavelink" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N812" />
+          <option value="N802" />
+        </list>
+      </option>
+      <option name="ignoredBaseClasses">
+        <list>
+          <option value="unittest.TestCase" />
+          <option value="unittest.case.TestCase" />
+          <option value="ui.app.Ui_MainWindow" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyShadowingNamesInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="PyQt6.QtWidgets.QWidget.*" />
+          <option value="PyQt6.QtWidgets.clicked.*" />
+          <option value="PyQt6.QtWidgets.toggled.*" />
+          <option value="PyQt6.QtWidgets.cursorPositionChanged.*" />
+          <option value="PyQt6.QtPrintSupport.paintRequested.*" />
+          <option value="PyQt6.QtGui.triggered.*" />
+          <option value="PyQt6.QtWidgets.currentFontChanged.*" />
+          <option value="PyQt6.QtWidgets.activated.*" />
+          <option value="PyQt6.QtWidgets.statusBar.*" />
+          <option value="PyQt6.QtCore.pyqtSignal.*" />
+          <option value="utils.dialog.YearDialog.*" />
+          <option value="utils.dialog.ConfigurationDialog.*" />
+          <option value="utils.dialog.SupplierDialog.*" />
+          <option value="utils.dialog.configuration.ConfigurationDialog.*" />
+          <option value="utils.dialog.supplier.SupplierDialog.*" />
+          <option value="utils.dialog.year.YearDialog.*" />
+          <option value="utils.dialog.import_backup.ImportBackupDialog.*" />
+          <option value="PySide6.QtGui.activated.*" />
+          <option value="PySide6.QtGui.triggered.*" />
+          <option value="PySide6.QtWidgets.clicked.*" />
+          <option value="utils.components.Button.*" />
+          <option value="utils.dialog.import_backup.ImportBackupWorker.*" />
+          <option value="services.BackupWorker.*" />
+          <option value="services.DoBackupWorker.*" />
+          <option value="PySide6.QtWidgets.statusBar.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
