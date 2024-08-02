@@ -62,4 +62,3 @@ class User(BaseModel):
     username = CharField()
     email = CharField(unique=True)
     password = CharField()
-

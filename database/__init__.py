@@ -14,7 +14,9 @@ def initialize_services():
 
 
 def initialize_users():
-    User.get_or_create(username="afl", email="test@afl.com", password=get_password_hash("afl123"))
+    User.get_or_create(
+        username="afl", email="test@afl.com", password=get_password_hash("afl123")
+    )
 
 
 def init_db():
