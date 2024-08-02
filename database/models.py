@@ -2,8 +2,7 @@ import datetime
 
 from peewee import *
 
-
-db = PostgresqlDatabase('afl-challenge', user='postgres', password='postgres', host='localhost', port=5432)
+from database.database import db
 
 
 class BaseModel(Model):
@@ -29,16 +28,14 @@ class Company(BaseModel):
     city = CharField()
     logo = BlobField()
 
-    created_at = DateTimeField(default=datetime.datetime.now)
-    updated_at = DateTimeField(default=datetime.datetime.now)
-
 
 class Contract(BaseModel):
-    company = ForeignKeyField(Company, backref='contracts', on_delete='CASCADE')
+    company = ForeignKeyField(
+        Company, field="cnpj", backref="contracts", on_delete="CASCADE"
+    )
     effective_date = DateField()
     signature_date = DateField()
-    contract_rate = FloatField(),
-    contracted_services = CharField()
+    contract_rate = FloatField()
 
 
 class Department(BaseModel):
@@ -46,17 +43,23 @@ class Department(BaseModel):
 
 
 class Service(BaseModel):
-    contract = ForeignKeyField(Contract, backref='services')
-    department = ForeignKeyField(Department, backref='services')
-    service_type = CharField()
+    name = CharField()
 
 
-def initialize_departments():
-    Department.get_or_create(name='Departamento A')
-    Department.get_or_create(name='Departamento B')
+class ContractService(BaseModel):
+    contract = ForeignKeyField(
+        Contract, backref="contract_services", on_delete="CASCADE"
+    )
+    service = ForeignKeyField(Service, backref="contract_services")
+    department = ForeignKeyField(Department, backref="contract_services")
+
+    class Meta:
+        database = db
+        indexes = ((("contract", "service", "department"), True),)
 
 
-db.connect()
-db.create_tables([Company, Contract, Department, Service])
-initialize_departments()
-db.close()
+class User(BaseModel):
+    username = CharField()
+    email = CharField(unique=True)
+    password = CharField()
+
